@@ -1,0 +1,1 @@
+web: gunicorn philomath.wsgi --log-file -
