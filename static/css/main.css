@@ -1,19 +1,13 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    color: #fff;
-}
-
 #navbbar {
     background-color: #130f24;
 }
 #coursetitle{
   margin-bottom: 20px;
 }
-#textcolor{
-    color: white;
-}
+
 
 
 #contact.li{

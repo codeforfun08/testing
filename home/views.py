@@ -14,3 +14,5 @@ def home(request):
         return redirect("/")
     else:
         return render(request,"index.html")
+def programming(request):
+    return render(request,"programming.html")

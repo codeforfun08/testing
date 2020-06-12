@@ -1,0 +1,184 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/main.css' %}">
+    <link rel="stylesheet" href="{%static 'css/course.css' %}">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://transloadit.edgly.net/releases/uppy/v1.15.0/uppy.min.css" rel="stylesheet">
+    <link rel = "icon" href = "{%static 'images/icon2.png' %}" type = "image/x-icon">
+     <title>Philomath</title>
+  </head>
+  <body>  
+    <nav id="navbbar" class="navbar sticky-top navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="/">
+        <img src="{%static 'images/logo.png' %}" width="150" height="60" alt="" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#courses">Courses<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >Enroll in a course</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >Become a Tutor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >About Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="#bookdemo">BOOK A FREE DEMO</a>
+        </form>
+      </div>
+    </nav>
+<!----------------------main first------------------------>
+{% block content %}
+
+
+
+
+{% endblock %}
+
+
+
+
+<div id="bookdemo">
+  <section class="text-gray-700 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">BOOK A FREE DEMO</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+      </div>
+      <form method="POST" action="/">
+        {% csrf_token %}
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+         
+          <div class="p-2 w-1/2"> 
+            <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2" placeholder="Name" type="text" name="name">
+          </div>
+          <div class="p-2 w-1/2">
+            <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2" placeholder="Mobile Number" type="text" name="number">
+          </div>
+          <div class="p-2 w-full">
+            <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2" placeholder="Email" type="email" name="email">
+          </div>
+          <div class="p-2 w-full">
+            <strong>TIME SLOT</strong>
+            <select class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2" name="time">
+              <option value="9 A.M - 12 P.M"><strong> 9 A.M - 12 P.M</strong></option>
+              <option value="2 P.M - 5 P.M"><strong>2 P.M - 5 P.M</strong></option>
+              <option value="6 P.M - 9 P.M"><strong>6 P.M - 9 P.M</strong></option>
+              
+            </select>
+          </div>
+          <div class="p-2 w-full">
+            <strong>Choose the subject for demo</strong>
+            <select class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2" name="subject">
+              <option value="ENGLISH"><strong>ENGLISH</strong></option>
+              <option value="MATHS"><strong>MATHS</strong></option>
+              <option value="SCIENCE(PHYSICS,CHEMISTRY,BIOLOGY)"><strong>SCIENCE(PHYSICS,CHEMISTRY,BIOLOGY)</strong></option>
+              <option value="SOCIAL"><strong>SOCIAL</strong></option>
+              <option value="INFORMATION TECHNOLOGY"><strong>INFORMATION TECHNOLOGY</strong></option>
+              <option value="PROGRAMMING"><strong>PROGRAMMING</strong></option>
+              <option value="WEB DEVELOPMENT"><strong>WEB DEVELOPMENT</strong></option>
+              
+            </select>
+          </div>
+        
+          <div class="p-2 w-full">
+            <button type="submit" class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">BOOK</button>
+          </div>
+        
+        </div>
+      </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+
+<div class="mainfooter"> 
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">mana gurinchi rayali</div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Courses</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">IV - X</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">C++</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Pyhton</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Web development</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Competetive Coding</a></li>
+            </ul>
+          </div>
+
+          <div id="contact" class="col-xs-10 col-md-3">
+            <h6>CONTACT US</h6>
+            <ul class="footer-links">
+              <li><i class="fa fa-phone"></i> +91-9550683735</li>
+              <li><i class="fa fa-phone"></i> +91-9618652680</li>
+              <li><i class="fa fa-phone"></i> +91-8008912447</li>
+              <br>
+              <li><i class="fa fa-envelope"></i>    philomathonlineacademy@gmail.com</li>
+              <li><i class="fa fa-map-marker-alt"></i>Telangana,India</li>
+              
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 
+         <a href="#">Philomath</a>.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook" target="_blank" href="https://www.facebook.com/Philomath-Online-Academy-113958670350932/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+
+
+
+</div>
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://transloadit.edgly.net/releases/uppy/v1.15.0/uppy.min.js"></script>
+     <script src="https://use.fontawesome.com/233776e306.js"></script>
+   
+  
+  </body>
+</html>

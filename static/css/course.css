@@ -1,0 +1,28 @@
+ #pro.title {
+   font-size: 2em;
+  text-align:center;
+  color:whitesmoke;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScOtW6LJxXse2YArEuTtTzL2pvCqOfxer6dhrraTWQE3Quj94M&usqp=CAU");
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.pretext{
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.language
+{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 15px;
+}
+.showing{
+margin-left: auto;
+margin-right: auto;
+display: block  ;
+}
+
