@@ -15,5 +15,10 @@ def home(request):
         return render(request,"index.html",{"name":name})
     else:
         return render(request,"index.html")
+       
+def webdev(request):
+    return render(request,"webdev.html")
+
+
 def programming(request):
     return render(request,"programming.html")

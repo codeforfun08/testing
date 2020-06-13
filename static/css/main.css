@@ -7,8 +7,13 @@ html{
 #coursetitle{
   margin-bottom: 20px;
 }
+.demo{
+  background-color: #00aced;
+}
+#bookdemo{
+  background-image: url("/static/images/book.jpg");
 
-
+}
 
 #contact.li{
     padding-top: 5em;
