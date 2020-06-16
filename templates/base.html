@@ -157,9 +157,18 @@
         </div>
 
       </div>
+      <div  class="col-md-1 mb-3">
+        <label>Country</label>
+        <select id="countrycode"class="custom-select" name="subject" id="validationCustom04" required>
+          <option value="IN"><strong>IN</strong></option>
+          <option value="US"><strong>US</strong></option>
+            </select>
+
+      </div>
+
       <div class="col-md-3 mb-3">
         <label for="validationCustom02">Mobile Number</label>
-        <input type="tel" class="form-control" name="number" id="validationCustom02" pattern="[0-9]{10}" Placeholder="Enter your 10 digit Mobile Number" required>
+        <input id="input-phone" type="tel" class="form-control" name="number" id="validationCustom02"  Placeholder="Enter Your Mobile Number" required>
         <div class="invalid-feedback">
           Please provide a valid Mobile Number. 
         </div>
@@ -297,6 +306,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://transloadit.edgly.net/releases/uppy/v1.15.0/uppy.min.js"></script>
      <script src="https://use.fontawesome.com/233776e306.js"></script>
+     <script  src="{%static 'js/cleave.js' %}"  ></script>
+     <script  src="{%static 'js/cleave-phone.i18n.js' %}"  ></script>
+     <script>
+       var cleave= new Cleave('#input-phone',{
+          phone:true,
+          phoneRegionCode: 'IN'
+       });
+       $('countrycode').change(function(){
+         cleave.setRegionCode(this.value);
+         cleave.setRawValue('');
+       });
+
+
+     </script>
      <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
